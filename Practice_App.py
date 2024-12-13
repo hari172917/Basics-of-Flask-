@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template,session
+from flask import Flask,request,render_template,session,redirect
 app=Flask(__name__)
 @app.route("/")
 def welcome():
@@ -11,6 +11,8 @@ def greet():
         return f"Q4     Hello {name}"
     else:
         return f"Q4           Hello Guest"
+    
+
 @app.route("/calc/<ops>&<n1>&<n2>")
 def operations(ops,n1,n2):
     first_num=int(n1)
