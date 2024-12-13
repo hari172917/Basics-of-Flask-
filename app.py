@@ -2,6 +2,7 @@ from flask import Flask,request,render_template
 app=Flask(__name__)
 @app.route("/")
 def welcome():
+    print("HELLO EVERY ONE")
     return render_template("index.html")
 @app.route("/Greet",methods=["POST","GET"])
 def greet():   
